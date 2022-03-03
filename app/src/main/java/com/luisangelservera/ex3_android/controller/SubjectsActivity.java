@@ -3,6 +3,8 @@ package com.luisangelservera.ex3_android.controller;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.luisangelservera.ex3_android.MyAdapter;
@@ -28,6 +30,14 @@ public class SubjectsActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(this, R.layout.subject_item, subjects);
         listView.setAdapter(myAdapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //TODO: Abrir nueva activity
+            }
+        });
 
     }
 
