@@ -2,6 +2,7 @@ package com.luisangelservera.ex3_android.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,7 +36,9 @@ public class SubjectsActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //TODO: Abrir nueva activity
+                Subject subject = subjects.get(i);
+                Intent intent = SubjectInfoActivity.newIntent(SubjectsActivity.this, subject);
+                startActivity(intent);
             }
         });
 
