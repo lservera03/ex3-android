@@ -33,10 +33,10 @@ public class SubjectsActivity extends AppCompatActivity {
 
 
     private void loadSubjects() {
-        subjects.add(new Subject("Nose", 1));
-        subjects.add(new Subject("Nose 1", 2));
-        subjects.add(new Subject("Nose 2", 3));
-        //subjects.add(new Subject("Nose 3", 4));
+        subjects.add(new Subject("Nose", 1, "Bienvenido a ", R.drawable.mobile_development));
+        subjects.add(new Subject("Nose 1", 2, "Bienvenido a ", R.drawable.mobile_development));
+        subjects.add(new Subject("Nose 2", 3, "Bienvenido a ", R.drawable.mobile_development));
+        subjects.add(new Subject("Nose 3", 4, "Bienvenido a ", R.drawable.mobile_development));
     }
 
 }

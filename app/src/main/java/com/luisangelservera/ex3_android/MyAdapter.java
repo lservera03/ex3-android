@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
@@ -55,6 +56,9 @@ public class MyAdapter extends BaseAdapter {
 
         TextView subjectCredits = aux.findViewById(R.id.creditsTV);
         subjectCredits.setText(String.valueOf(subjects.get(i).getCredits()));
+
+        ImageView subjectImage = aux.findViewById(R.id.subjectImageView);
+        subjectImage.setImageResource(subjects.get(i).getImage());
 
 
         return aux;
