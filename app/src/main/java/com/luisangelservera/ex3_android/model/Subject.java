@@ -1,24 +1,27 @@
 package com.luisangelservera.ex3_android.model;
 
 import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 
 public class Subject {
 
-    private String name;
+    @StringRes
+    private int name;
     private int credits;
-    private String description;
+    @StringRes
+    private int description;
     @DrawableRes
     private int image;
 
 
-    public Subject(String name, int credits, String description, @DrawableRes int image) {
+    public Subject(@StringRes int name, int credits, @StringRes int description, @DrawableRes int image) {
         this.name = name;
         this.credits = credits;
         this.description = description;
         this.image = image;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
@@ -26,10 +29,10 @@ public class Subject {
         return credits;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return description;
     }
-    
+
     public int getImage() {
         return image;
     }

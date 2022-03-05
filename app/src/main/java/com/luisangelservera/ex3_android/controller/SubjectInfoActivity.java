@@ -1,6 +1,7 @@
 package com.luisangelservera.ex3_android.controller;
 
 import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.luisangelservera.ex3_android.R;
@@ -24,9 +25,10 @@ public class SubjectInfoActivity extends AppCompatActivity {
     private TextView subjectDescTV;
     private TextView subjectCreditsTV;
 
-
-    private String subjectName;
-    private String subjectDescription;
+    @StringRes
+    private int subjectName;
+    @StringRes
+    private int subjectDescription;
     private int subjectCredits;
     @DrawableRes
     private int subjectImage;
@@ -37,8 +39,8 @@ public class SubjectInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_info);
 
-        subjectName = getIntent().getStringExtra(SUBJECT_NAME);
-        subjectDescription = getIntent().getStringExtra(SUBJECT_DESCRIPTION);
+        subjectName = getIntent().getIntExtra(SUBJECT_NAME, 0);
+        subjectDescription = getIntent().getIntExtra(SUBJECT_DESCRIPTION, 0);
         subjectCredits = getIntent().getIntExtra(SUBJECT_CREDITS, 0);
         subjectImage = getIntent().getIntExtra(SUBJECT_IMAGE, 0);
 
@@ -49,7 +51,7 @@ public class SubjectInfoActivity extends AppCompatActivity {
         subjectNameTV.setText(subjectName);
 
         subjectCreditsTV = findViewById(R.id.creditsInfoTV);
-        subjectCreditsTV.setText(subjectCredits + " credits.");
+        subjectCreditsTV.setText(subjectCredits + " " + getResources().getString(R.string.credits_string));
 
         subjectDescTV = findViewById(R.id.subjectDescInfoTV);
         subjectDescTV.setText(subjectDescription);
@@ -65,9 +67,7 @@ public class SubjectInfoActivity extends AppCompatActivity {
         intent.putExtra(SUBJECT_DESCRIPTION, subject.getDescription());
         intent.putExtra(SUBJECT_IMAGE, subject.getImage());
 
-
         return intent;
     }
-
 
 }

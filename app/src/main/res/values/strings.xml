@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Ex3-android</string>
+
+    <string name="mobile_name">Development in mobile devices I</string>
+    <string name="mobile_description">The main objective of the subject is to expand the knowledge of students in the field of programming, introducing a new field: programming for mobile devices. Given that the world of programming for mobile devices is very broad, the subject will focus on the system that, for now, has a greater presence in the market. This system is Android. </string>
+    <string name="online_services_name">Development of online services</string>
+    <string name="online_services_description">In this subject, from a practical point of view, we will study the existing online services architectures, what communication protocols are been used, how the data is transferred, what features they have, etc.</string>
+    <string name="web_name">Development in web environments</string>
+    <string name="web_description">The aim of the subject Development in web environments is for students to acquire the knowledge needed to Develop Applications using web technologies. The technologies used and taught are HTML, CSS and JavaScript. They are currently the standard recommended by the W3C (World Wide Consortium) and considered the best for Web Development.</string>
+    <string name="object_name">Object oriented programming</string>
+    <string name="object_description">Object-Oriented Programming (OOP) is one of the most popular paradigms nowadays, and Java is one of the most used languages in the industry. The goal is to provide the student with the tools needed to plan solutions following an object-oriented pattern, as well as to implement them in the Java language. This subject will serve as the basis for other subjects where object-oriented languages are used, and for the development of mobile applications, as Java is the most used language when implementing Android applications.</string>
+    <string name="credits_string">credits.</string>
 </resources>
