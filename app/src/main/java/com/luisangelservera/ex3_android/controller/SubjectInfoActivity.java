@@ -9,6 +9,7 @@ import com.luisangelservera.ex3_android.model.Subject;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -48,6 +49,7 @@ public class SubjectInfoActivity extends AppCompatActivity {
         subjectImageIV.setImageResource(subjectImage);
 
         subjectNameTV = findViewById(R.id.subjectNameInfoTV);
+        subjectNameTV.setTypeface(null, Typeface.BOLD);
         subjectNameTV.setText(subjectName);
 
         subjectCreditsTV = findViewById(R.id.creditsInfoTV);
